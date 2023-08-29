@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="UnusedResources" >
+
+    <!--Dynamic module titles-->
+    <string name="feature_home">Home</string>
+    <string name="feature_movie_list">Movie List</string>
+    <string name="feature_movie_player">Movie Player</string>
+    <string name="feature_movie_detail">Movie Detail</string>
+</resources>
