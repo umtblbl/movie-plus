@@ -36,6 +36,7 @@ fun DependencyHandler.addTestsDependencies() {
     testImplementation(TestDependencies.FRAGMENT_TEST)
     testImplementation(TestDependencies.EXT)
     testImplementation(TestDependencies.MOCK_WEB_SERVER)
+    testImplementation(TestDependencies.ROOM)
 
     androidTestImplementation(TestAndroidDependencies.PLAY_CORE)
     androidTestImplementation(TestAndroidDependencies.LEAKCANARY)

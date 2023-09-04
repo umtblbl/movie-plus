@@ -6,6 +6,7 @@ import com.movieplus.app.di.DaggerAppComponent
 import com.movieplus.core.di.CoreComponent
 import com.movieplus.core.di.DaggerCoreComponent
 import com.movieplus.core.di.module.ContextModule
+import com.movieplus.core.util.NetworkHeader
 
 /**
  * Base class to maintain application state and start base jobs.
@@ -34,8 +35,14 @@ class MoviePlusApp : SplitCompatApplication() {
     private fun initCoreDI() {
         coreComponent = DaggerCoreComponent
             .builder()
-            .contextModule(ContextModule(this))
-            .build()
+            .contextModule(
+                ContextModule(
+                    this,
+                    NetworkHeader(
+                        language = "tr-TR"
+                    )
+                )
+            ).build()
     }
 
     private fun initAppDI() {

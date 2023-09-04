@@ -6,6 +6,7 @@ import com.movieplus.app.MoviePlusApp
 import com.movieplus.commons.ui.base.ViewBindingFragment
 import com.movieplus.dynamicfeatures.movielist.databinding.FragmentMovieListBinding
 import com.movieplus.dynamicfeatures.movielist.di.DaggerMovieListComponent
+import kotlinx.coroutines.launch
 
 class MovieListFragment : ViewBindingFragment<MovieListViewModel, FragmentMovieListBinding>(MovieListViewModel::class) {
 
@@ -26,7 +27,10 @@ class MovieListFragment : ViewBindingFragment<MovieListViewModel, FragmentMovieL
     }
 
     override fun initView() {
-        println("ümit")
+        uiScope.launch {
+            val response = viewModel.popularMovie()
+            println("ümit")
+        }
     }
 
     //region private functions

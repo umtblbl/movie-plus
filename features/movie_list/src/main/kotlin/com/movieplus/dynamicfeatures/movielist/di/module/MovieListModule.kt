@@ -11,12 +11,11 @@ import dagger.multibindings.IntoMap
 
 @Module
 abstract class MovieListModule {
-
     @Binds
     abstract fun bindViewModelFactory(viewModelFactory: ViewModelFactory): ViewModelProvider.Factory
 
     @IntoMap
     @Binds
     @ViewModelKey(MovieListViewModel::class)
-    abstract fun provideUserSearchViewModel(movieListViewModel: MovieListViewModel): ViewModel
+    abstract fun provideMovieListViewModel(movieListViewModel: MovieListViewModel): ViewModel
 }

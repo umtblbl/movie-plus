@@ -100,6 +100,7 @@ dependencies {
     implementation(Dependencies.DAGGER)
 
     kapt(AnnotationProcessorsDependencies.DAGGER)
+    kapt(AnnotationProcessorsDependencies.ROOM)
 
     addTestsDependencies()
 }

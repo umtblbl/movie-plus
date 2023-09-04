@@ -15,6 +15,7 @@ object BuildDependenciesVersions {
     const val COIL = "0.13.0"
     const val PLAY_CORE = "1.8.2"
     const val LEAKCANARY = "2.5"
+    const val ROOM = "2.3.0"
 
     // Tests
     const val TEST = "1.3.0"
