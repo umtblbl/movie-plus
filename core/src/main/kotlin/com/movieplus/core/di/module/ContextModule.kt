@@ -2,6 +2,7 @@ package com.movieplus.core.di.module
 
 import android.app.Application
 import android.content.Context
+import com.movieplus.core.util.NetworkHeader
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -12,7 +13,10 @@ import javax.inject.Singleton
  * @see Module
  */
 @Module
-class ContextModule(private val application: Application) {
+class ContextModule(
+    private val application: Application,
+    private val networkHeader: NetworkHeader
+) {
 
     /**
      * Create a provider method binding for [Context].
@@ -23,4 +27,8 @@ class ContextModule(private val application: Application) {
     @Singleton
     @Provides
     fun provideContext(): Context = application
+
+    @Singleton
+    @Provides
+    fun provideNetworkHeader(): NetworkHeader = networkHeader
 }

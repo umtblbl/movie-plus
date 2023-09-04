@@ -20,5 +20,7 @@ class AppModule {
      * @see Provides
      */
     @Provides
-    fun provideContext(application: MoviePlusApp): Context = application.applicationContext
+    fun provideContext(
+        application: MoviePlusApp
+    ): Context = application.applicationContext
 }

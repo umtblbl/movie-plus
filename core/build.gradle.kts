@@ -1,8 +1,7 @@
 import dependencies.Dependencies
-import dependencies.AnnotationProcessorsDependencies
-import extensions.implementation
-import extensions.kapt
 import extensions.buildConfigStringField
+import extensions.implementation
+import dependencies.AnnotationProcessorsDependencies
 
 plugins {
     id("commons.android-library")
@@ -24,4 +23,8 @@ dependencies {
     implementation(Dependencies.RETROFIT_CONVERTER_MOSHI)
     implementation(Dependencies.MOSHI)
     implementation(Dependencies.MOSHI_KTX)
+    implementation(Dependencies.ROOM)
+    implementation(Dependencies.ROOM_KTX)
+
+    kapt(AnnotationProcessorsDependencies.ROOM)
 }
