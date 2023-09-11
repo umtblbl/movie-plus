@@ -1,13 +1,6 @@
 package com.movieplus.dynamicfeatures.movielist.model
 
-class PopularMovie(
-    var page: Int,
-    var popularMovies: List<PopularMovieData>,
-    var totalPages: Int,
-    var totalResults: Int
-)
-
-class PopularMovieData(
+class MovieModel(
     var genreIds: List<Int>,
     var title: String,
     var overview: String,

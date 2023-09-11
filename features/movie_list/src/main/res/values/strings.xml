@@ -2,9 +2,5 @@
 <resources>
     <!-- Global -->
     <string name="image">Image</string>
-    <!-- User Search Fragment -->
-    <string name="fragment_user_search">Fragment User Search</string>
-    <!-- Toast Message-->
-    <string name="toast_process_successful_title">Successful</string>
-    <string name="toast_process_successful_text">Process completed.</string>
+    <string name="generic_error_message">Bilinmeyen bir hata oluştu.</string>
 </resources>

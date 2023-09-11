@@ -1,4 +1,5 @@
 package com.movieplus.commons.ui.adapter
+import android.annotation.SuppressLint
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
@@ -10,6 +11,11 @@ class RecyclerViewBasicAdapter<T>(
 ) : RecyclerView.Adapter<RecyclerViewBasicAdapter<T>.ViewHolder>() {
 
     var list: List<T> = arrayListOf()
+        @SuppressLint("NotifyDataSetChanged")
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
 
     //region Override
 

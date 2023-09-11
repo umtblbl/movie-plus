@@ -18,6 +18,7 @@ import javax.inject.Singleton
         ContextModule::class,
         NetworkModule::class,
         DataSourceModule::class,
+        MediatorModule::class,
         RepositoryModule::class,
         DatabaseModule::class
     ]

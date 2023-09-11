@@ -6,6 +6,7 @@ object Configs {
         const val CACHE_SIZE: Long = 10 * 1024 * 1024 // 10 MiB
         const val TIME_OUT: Long = 3 * 60
         const val TOKEN: String = ""
+        const val IMAGE_URL = "https://image.tmdb.org/t/p/w500/"
     }
 
     object Database {

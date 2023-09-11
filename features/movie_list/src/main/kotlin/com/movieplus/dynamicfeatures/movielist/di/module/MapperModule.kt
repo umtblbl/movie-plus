@@ -1,7 +1,8 @@
 package com.movieplus.dynamicfeatures.movielist.di.module
 
 import com.movieplus.core.di.scope.FeatureScope
-import com.movieplus.dynamicfeatures.movielist.mapper.PopularMovieResponseMapper
+import com.movieplus.dynamicfeatures.movielist.mapper.MovieGenresMapper
+import com.movieplus.dynamicfeatures.movielist.mapper.MovieResponseMapper
 import dagger.Module
 import dagger.Provides
 
@@ -10,5 +11,9 @@ class MapperModule {
 
     @FeatureScope
     @Provides
-    fun providePopularMovieResponseMapper() = PopularMovieResponseMapper()
+    fun provideMovieResponseMapper() = MovieResponseMapper()
+
+    @FeatureScope
+    @Provides
+    fun provideMovieGenresResponseMapper() = MovieGenresMapper()
 }

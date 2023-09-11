@@ -1,17 +1,22 @@
 package com.movieplus.core.data.remote.api
 
-import com.movieplus.core.data.remote.api.model.MovieGenreResponse
-import com.movieplus.core.data.remote.api.model.PopularMovieResponse
+import com.movieplus.core.data.remote.api.model.MovieGenresResponse
+import com.movieplus.core.data.remote.api.model.MovieResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface TmdbAPI {
 
     @GET("genre/movie/list")
-    suspend fun movieGenres(): MovieGenreResponse?
+    suspend fun movieGenres(): MovieGenresResponse?
 
     @GET("movie/popular")
     suspend fun popularMovies(
         @Query("page") page: Int?
-    ): PopularMovieResponse?
+    ): MovieResponse?
+
+    @GET("movie/top_rated")
+    suspend fun topRated(
+        @Query("page") page: Int?
+    ): MovieResponse?
 }
