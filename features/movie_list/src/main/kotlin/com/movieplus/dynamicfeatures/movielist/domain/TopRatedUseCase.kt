@@ -8,17 +8,17 @@ import com.movieplus.dynamicfeatures.movielist.mapper.MovieResponseMapper
 import com.movieplus.dynamicfeatures.movielist.model.MovieModel
 import javax.inject.Inject
 
-class PopularMovieUseCase @Inject constructor(
+class TopRatedUseCase @Inject constructor(
     private val movieRepository: MovieRepository,
     private val movieResponseMapper: MovieResponseMapper
-) : UseCase<ResultWrapper<List<MovieModel>?>, PopularMovieUseCase.Params>() {
+) : UseCase<ResultWrapper<List<MovieModel>?>, TopRatedUseCase.Params>() {
 
     data class Params(val mediatorLoadType: MediatorLoadType?)
 
     override suspend fun invoke(
         params: Params?
     ): ResultWrapper<List<MovieModel>?> {
-        movieRepository.getPopularMovies(loadType = params?.mediatorLoadType).let { response ->
+        movieRepository.getTopRated(loadType = params?.mediatorLoadType).let { response ->
             return when (response) {
                 is ResultWrapper.Success -> ResultWrapper.Success(
                     movieResponseMapper.map(response.value)

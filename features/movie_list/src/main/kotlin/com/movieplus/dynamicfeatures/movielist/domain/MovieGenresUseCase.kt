@@ -3,25 +3,22 @@ package com.movieplus.dynamicfeatures.movielist.domain
 import com.movieplus.core.data.repository.MovieRepository
 import com.movieplus.core.domain.UseCase
 import com.movieplus.core.model.ResultWrapper
-import com.movieplus.core.util.MediatorLoadType
-import com.movieplus.dynamicfeatures.movielist.mapper.MovieResponseMapper
-import com.movieplus.dynamicfeatures.movielist.model.MovieModel
+import com.movieplus.dynamicfeatures.movielist.mapper.MovieGenresMapper
+import com.movieplus.dynamicfeatures.movielist.model.MovieGenre
 import javax.inject.Inject
 
-class PopularMovieUseCase @Inject constructor(
+class MovieGenresUseCase @Inject constructor(
     private val movieRepository: MovieRepository,
-    private val movieResponseMapper: MovieResponseMapper
-) : UseCase<ResultWrapper<List<MovieModel>?>, PopularMovieUseCase.Params>() {
-
-    data class Params(val mediatorLoadType: MediatorLoadType?)
+    private val movieGenresMapper: MovieGenresMapper
+) : UseCase<ResultWrapper<List<MovieGenre>?>, UseCase.None>() {
 
     override suspend fun invoke(
-        params: Params?
-    ): ResultWrapper<List<MovieModel>?> {
-        movieRepository.getPopularMovies(loadType = params?.mediatorLoadType).let { response ->
+        params: None?
+    ): ResultWrapper<List<MovieGenre>?> {
+        movieRepository.getMovieGenres().let { response ->
             return when (response) {
                 is ResultWrapper.Success -> ResultWrapper.Success(
-                    movieResponseMapper.map(response.value)
+                    movieGenresMapper.map(response.value)
                 )
                 is ResultWrapper.GenericError -> ResultWrapper.GenericError(
                     response.code,

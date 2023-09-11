@@ -3,7 +3,7 @@ package com.movieplus.core.data.remote.api.model
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class MovieGenreResponse(
+data class MovieGenresResponse(
     val genres: List<Genre>?,
 )
 

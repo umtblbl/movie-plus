@@ -4,7 +4,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class PopularMovieResponse(
+data class MovieResponse(
     val page: Int?,
     @Json(name = "results")
     val popularMovies: List<PopularMovieData?>?,
