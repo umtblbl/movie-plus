@@ -9,6 +9,43 @@
     <fragment
         android:id="@+id/movie_list_fragment"
         android:name="com.movieplus.dynamicfeatures.movielist.ui.MovieListFragment"
-        android:label="movieListFragment" />
+        android:label="movieListFragment">
+
+        <action
+            android:id="@+id/action_movie_list_to_movie_detail"
+            app:destination="@+id/movie_detail_fragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@+id/movie_list_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/movie_detail_fragment"
+        android:name="com.movieplus.dynamicfeatures.moviedetail.ui.MovieDetailFragment"
+        android:label="movieDetailFragment">
+
+        <argument
+            android:name="over_view"
+            app:argType="string" />
+
+        <argument
+            android:name="title"
+            app:argType="string" />
+
+        <argument
+            android:name="vote"
+            app:argType="string" />
+
+        <argument
+            android:name="date"
+            app:argType="string" />
+
+        <argument
+            android:name="poster_path"
+            app:argType="string" />
+    </fragment>
 
 </navigation>

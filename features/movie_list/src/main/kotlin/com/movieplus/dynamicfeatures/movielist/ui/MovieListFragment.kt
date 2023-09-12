@@ -2,6 +2,7 @@ package com.movieplus.dynamicfeatures.movielist.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.movieplus.app.MoviePlusApp
 import com.movieplus.commons.ui.adapter.RecyclerViewBasicAdapter
 import com.movieplus.commons.ui.base.ViewBindingFragment
@@ -13,6 +14,7 @@ import com.movieplus.dynamicfeatures.movielist.databinding.FragmentMovieListBind
 import com.movieplus.dynamicfeatures.movielist.databinding.ItemMovieBinding
 import com.movieplus.dynamicfeatures.movielist.di.DaggerMovieListComponent
 import com.movieplus.dynamicfeatures.movielist.model.MovieModel
+import com.movieplus.dynamicfeatures.movielist.ui.MovieListFragmentDirections
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -81,6 +83,9 @@ class MovieListFragment :
                         textViewTitle.text = item.title
                         imageViewMovie.imageUrl("${Configs.Network.IMAGE_URL}${item.posterPath}")
                     }
+            },
+            itemSelectedHandler = {
+
             }
         ).also {
             binding.recyclerViewPopularMovie.adapter = it
@@ -113,6 +118,17 @@ class MovieListFragment :
                         textViewTitle.text = item.title
                         imageViewMovie.imageUrl("${Configs.Network.IMAGE_URL}${item.posterPath}")
                     }
+            },
+            itemSelectedHandler = {
+                findNavController().navigate(
+                    MovieListFragmentDirections.actionMovieListToMovieDetail(
+                        title = it.title,
+                        vote = it.voteAverage.toString(),
+                        overView = it.overview,
+                        date = it.releaseDate,
+                        posterPath = it.posterPath
+                    )
+                )
             }
         ).also {
             binding.recyclerViewTopRated.adapter = it
