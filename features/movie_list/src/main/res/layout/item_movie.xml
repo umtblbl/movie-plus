@@ -16,7 +16,8 @@
             android:id="@+id/imageViewMovie"
             android:layout_width="wrap_content"
             android:layout_height="160dp"
-            android:scaleType="center"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
             android:src="@color/purple_200" />
 
     </androidx.cardview.widget.CardView>

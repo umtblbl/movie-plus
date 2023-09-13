@@ -23,4 +23,5 @@ object Dependencies {
     const val PLAY_CORE = "com.google.android.play:core:${BuildDependenciesVersions.PLAY_CORE}"
     const val ROOM = "androidx.room:room-runtime:${BuildDependenciesVersions.ROOM}"
     const val ROOM_KTX = "androidx.room:room-ktx:${BuildDependenciesVersions.ROOM}"
+    const val EXO_PLAYER = "com.google.android.exoplayer:exoplayer:${BuildDependenciesVersions.EXO_PLAYER}"
 }

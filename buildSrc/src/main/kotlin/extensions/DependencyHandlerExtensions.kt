@@ -39,7 +39,6 @@ fun DependencyHandler.addTestsDependencies() {
     testImplementation(TestDependencies.ROOM)
 
     androidTestImplementation(TestAndroidDependencies.PLAY_CORE)
-    androidTestImplementation(TestAndroidDependencies.LEAKCANARY)
     androidTestImplementation(TestAndroidDependencies.ESPRESSO)
     androidTestImplementation(TestAndroidDependencies.RUNNER)
     androidTestImplementation(TestAndroidDependencies.RULES)
