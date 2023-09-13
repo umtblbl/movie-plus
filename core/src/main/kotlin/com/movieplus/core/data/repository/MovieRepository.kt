@@ -10,10 +10,10 @@ import com.movieplus.core.util.MediatorLoadType
 import javax.inject.Inject
 
 class MovieRepository @Inject constructor(
-    private val tmdbLocalDataSource: TmdbLocalDataSource,
-    private val tmdbRemoteDataSource: TmdbRemoteDataSource,
-    private val popularMovieRemoteMediator: PopularMovieRemoteMediator,
-    private val topRatedRemoteMediator: TopRatedRemoteMediator,
+    val tmdbLocalDataSource: TmdbLocalDataSource,
+    val tmdbRemoteDataSource: TmdbRemoteDataSource,
+    val popularMovieRemoteMediator: PopularMovieRemoteMediator,
+    val topRatedRemoteMediator: TopRatedRemoteMediator,
 ) {
     suspend fun getMovieGenres() = tmdbRemoteDataSource.movieGenres()
 
