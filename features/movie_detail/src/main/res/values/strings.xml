@@ -3,4 +3,5 @@
     <!-- Global -->
     <string name="image">image</string>
     <string name="imageViewContentDesc">Image View</string>
+    <string name="play">Play</string>
 </resources>

@@ -21,6 +21,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/imageViewPlay"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/baseline_play_circle_24"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewPoster"
+            app:layout_constraintEnd_toEndOf="@id/imageViewPoster"
+            app:layout_constraintStart_toStartOf="@id/imageViewPoster"
+            app:layout_constraintTop_toTopOf="@id/imageViewPoster"
+            android:contentDescription="@string/play" />
+
         <TextView
             android:id="@+id/textViewTitle"
             android:layout_width="match_parent"

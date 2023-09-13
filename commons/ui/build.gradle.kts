@@ -15,4 +15,5 @@ dependencies {
     implementation(Dependencies.NAVIGATION_FRAGMENT)
     implementation(Dependencies.NAVIGATION_UI)
     implementation(Dependencies.COIL)
+    implementation("com.github.bumptech.glide:glide:4.16.0")
 }

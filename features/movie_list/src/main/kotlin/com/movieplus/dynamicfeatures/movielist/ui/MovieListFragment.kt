@@ -14,7 +14,6 @@ import com.movieplus.dynamicfeatures.movielist.databinding.FragmentMovieListBind
 import com.movieplus.dynamicfeatures.movielist.databinding.ItemMovieBinding
 import com.movieplus.dynamicfeatures.movielist.di.DaggerMovieListComponent
 import com.movieplus.dynamicfeatures.movielist.model.MovieModel
-import com.movieplus.dynamicfeatures.movielist.ui.MovieListFragmentDirections
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -85,7 +84,15 @@ class MovieListFragment :
                     }
             },
             itemSelectedHandler = {
-
+                findNavController().navigate(
+                    MovieListFragmentDirections.actionMovieListToMovieDetail(
+                        title = it.title,
+                        vote = it.voteAverage.toString(),
+                        overView = it.overview,
+                        date = it.releaseDate,
+                        posterPath = it.posterPath
+                    )
+                )
             }
         ).also {
             binding.recyclerViewPopularMovie.adapter = it

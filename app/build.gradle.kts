@@ -31,7 +31,6 @@ android {
 
         vectorDrawables.useSupportLibrary = BuildAndroidConfig.SUPPORT_LIBRARY_VECTOR_DRAWABLES
         testInstrumentationRunner = BuildAndroidConfig.TEST_INSTRUMENTATION_RUNNER
-        testInstrumentationRunnerArguments.putAll(BuildAndroidConfig.TEST_INSTRUMENTATION_RUNNER_ARGUMENTS)
     }
 
     buildTypes {
@@ -113,8 +112,6 @@ dependencies {
     implementation(Dependencies.NAVIGATION_FRAGMENT)
     implementation(Dependencies.PLAY_CORE)
     implementation(Dependencies.DAGGER)
-
-    debugImplementation(DebugDependencies.LEAKCANARY)
 
     kapt(AnnotationProcessorsDependencies.DAGGER)
 }

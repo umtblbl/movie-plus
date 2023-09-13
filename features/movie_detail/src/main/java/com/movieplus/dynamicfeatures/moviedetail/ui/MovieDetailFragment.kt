@@ -2,6 +2,7 @@ package com.movieplus.dynamicfeatures.moviedetail.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.movieplus.app.MoviePlusApp
 import com.movieplus.commons.ui.base.ViewBindingFragment
@@ -9,6 +10,7 @@ import com.movieplus.commons.ui.extension.imageUrl
 import com.movieplus.core.Configs
 import com.movieplus.dynamicfeatures.moviedetail.databinding.FragmentMovieDetailBinding
 import com.movieplus.dynamicfeatures.moviedetail.di.DaggerMovieDetailComponent
+import com.movieplus.dynamicfeatures.moviedetail.ui.MovieDetailFragmentDirections
 
 class MovieDetailFragment :
     ViewBindingFragment<MovieDetailViewModel, FragmentMovieDetailBinding>(MovieDetailViewModel::class) {
@@ -38,6 +40,11 @@ class MovieDetailFragment :
             textViewDate.text = args.date
             imageViewPoster.imageUrl("${Configs.Network.IMAGE_URL}${args.posterPath}")
             textViewRate.text = args.vote
+            imageViewPlay.setOnClickListener {
+                findNavController().navigate(
+                    MovieDetailFragmentDirections.actionMovieListToMoviePlay()
+                )
+            }
         }
     }
 
