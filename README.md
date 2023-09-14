@@ -26,6 +26,14 @@ This application uses the MVVM [Model-View-ViewModel] architecture. This provide
 
 <br>
 
+# Pull Requests
+
+<br>
+
+<img width="50%" align="center" src="https://i.hizliresim.com/tkpi59t.png" />
+
+<br>
+
 # Libraries and Tools 🛠
 <li><a href="https://github.com/google/ExoPlayer">ExoPlayer</a></li>
 <li><a href="https://kotlinlang.org/docs/coroutines-overview.html">Kotlin Coroutines</a></li>
