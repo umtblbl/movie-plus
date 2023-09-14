@@ -5,7 +5,7 @@ A simple Android mobile application that uses TMDB APIs and has a multi-modular 
 
 <br>
 
-<img width="16%" align="center" src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" />
+<img width="30%" align="center" src="https://i.hizliresim.com/fnusf17.png" />
 
 <br>
 
@@ -16,13 +16,13 @@ This application uses the MVVM [Model-View-ViewModel] architecture. This provide
 
 # Architecture Scheme :zap:
 
-<img width="35%" align="center" src="https://hizliresim.com/jsabatz.png" />
+<img width="35%" align="center" src="https://i.hizliresim.com/7de4kim.png" />
 
 <br>
 
 # Module Scheme :zap:
 
-<img width="50%" align="center" src="https://hizliresim.com/7de4kim.png" />
+<img width="50%" align="center" src="https://i.hizliresim.com/jsabatz.png" />
 
 <br>
 
@@ -44,8 +44,8 @@ This application uses the MVVM [Model-View-ViewModel] architecture. This provide
 <li><a href="https://developer.android.com/topic/libraries/data-binding">Data Binding</a></li>
 <li><a href="https://developer.android.com/topic/libraries/architecture/viewmodel">ViewModel</a></li>
 
-#Offline Mode Structure
+# Offline Mode Structure
 
 # GIF :movie_camera:
 
-![](https://giphy.com/gifs/GMsCui64zprJ7opf87/giphy.gif)
+![](https://media.giphy.com/media/GMsCui64zprJ7opf87/giphy.gif)
