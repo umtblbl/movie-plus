@@ -16,13 +16,13 @@ This application uses the MVVM [Model-View-ViewModel] architecture. This provide
 
 # Architecture Scheme :zap:
 
-<img width="35%" align="center" src="https://i.hizliresim.com/7de4kim.png" />
+<img width="50%" align="center" src="https://i.hizliresim.com/jsabatz.png" />
 
 <br>
 
 # Module Scheme :zap:
 
-<img width="50%" align="center" src="https://i.hizliresim.com/jsabatz.png" />
+<img width="35%" align="center" src="https://i.hizliresim.com/b2ll7s1.png" />
 
 <br>
 
